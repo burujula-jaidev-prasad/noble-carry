@@ -177,14 +177,6 @@ const App: React.FC = () => {
                 <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold uppercase mb-6 tracking-[0.3em] text-sm">Join Us</h4>
-              <p className="font-mono text-xs text-gray-400 mb-6 uppercase tracking-widest leading-relaxed">Get honest updates on our radical impact journey.</p>
-              <div className="flex border-b border-gray-600 pb-3">
-                <input type="email" placeholder="YOUR EMAIL" className="bg-transparent outline-none w-full text-sm font-mono uppercase tracking-widest" />
-                <button className="hover:translate-x-2 transition-transform"><ArrowRight size={20} /></button>
-              </div>
-            </div>
           </div>
           <div className="max-w-7xl mx-auto mt-24 pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
             <div className="flex gap-10 mt-6 md:mt-0">
