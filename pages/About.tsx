@@ -53,20 +53,6 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <section className="bg-[#2d3a2d] text-[#f2efe8] p-12 md:p-20 rounded-[50px] overflow-hidden relative shadow-2xl">
-            <div className="relative z-10 max-w-4xl">
-              <h3 className="text-3xl md:text-4xl font-serif font-black uppercase tracking-tighter leading-none mb-10">This is a Movement, <br /> not just a store.</h3>
-              <p className="font-mono text-sm md:text-base text-white/50 mb-10 uppercase tracking-widest leading-relaxed">
-                Join 15,000+ conscious carries who have chosen responsibility over convenience. Let's make slow fashion the new standard.
-              </p>
-              <button className="bg-white text-[#2d3a2d] px-10 py-5 font-black uppercase tracking-widest text-sm rounded-full hover:scale-105 transition-transform flex items-center gap-4 shadow-xl">
-                Join the Movement <ArrowRight size={20} />
-              </button>
-            </div>
-            <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-              <img src={movementImage} className="w-full h-full object-cover" alt="Movement pattern" />
-            </div>
-          </section>
         </div>
       </div>
     </div>
