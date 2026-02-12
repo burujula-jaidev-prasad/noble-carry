@@ -72,20 +72,6 @@ const Impact: React.FC = () => {
           </div>
         </div>
 
-        <section className="bg-white p-12 md:p-20 rounded-[50px] shadow-sm text-center border border-[#2d3a2d]/5 relative overflow-hidden">
-          <div className="relative z-10">
-            <h2 className="text-2xl md:text-4xl font-serif font-black uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-[1.1] text-[#2d3a2d]">"Sustainability isn't marketing. It's an <span className="italic font-normal">engineering</span> challenge."</h2>
-            <p className="font-mono text-sm md:text-base text-[#2d3a2d]/50 max-w-2xl mx-auto mb-10 uppercase tracking-tight leading-relaxed">
-              Every bag comes with a unique ID code that allows you to trace its origin, from raw material source to the artisan who hand-finished it.
-            </p>
-            <button className="px-10 py-5 bg-[#2d3a2d] text-white font-black uppercase tracking-widest text-sm rounded-full hover:scale-105 transition-transform flex items-center gap-4 mx-auto shadow-2xl">
-              Trace Your Bag <Heart size={20} />
-            </button>
-          </div>
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200" alt="Tech Background" className="w-full h-full object-cover" />
-          </div>
-        </section>
       </div>
     </div>
   );
