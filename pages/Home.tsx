@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { ArrowRight, Shield, Droplet, Leaf, Users, Recycle } from 'lucide-react';
+import { ArrowRight, Shield, Droplet, Leaf, Users, Recycle, Zap } from 'lucide-react';
 import StoryPortfolio from '../components/StoryPortfolio';
 import TransparencySection from '../components/TransparencySection';
 import LifespanBar from '../components/LifespanBar';
@@ -166,14 +166,14 @@ const Home: React.FC = () => {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-[40px] overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?q=80&w=1200"
-                    alt="Wax Canvas Crafting Process"
+                    src="/noble-carry/images/craft-handcrafted.png"
+                    alt="Handcrafted Manufacturing Process"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                   />
                 </div>
                 <div className="absolute -bottom-8 -right-8 bg-[#2d3a2d] text-white p-8 rounded-3xl shadow-xl max-w-xs">
-                  <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-2">Natural Process</p>
-                  <p className="font-serif text-2xl font-bold">Hand-Waxed Canvas</p>
+                  <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-2">Artisanal Process</p>
+                  <p className="font-serif text-2xl font-bold">100% Handcrafted</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -184,38 +184,38 @@ const Home: React.FC = () => {
                   The Craft
                 </h2>
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black uppercase tracking-tighter leading-none mb-8 text-[#2d3a2d] heading-academic">
-                  Wax Canvas: <br />Nature's Armor
+                  Manufactured <br />by Human Hands
                 </h3>
                 <p className="text-lg text-[#2d3a2d]/70 font-sans leading-relaxed mb-8">
-                  Instead of plastic coatings, we use a centuries-old technique: wax canvasing. Natural beeswax is hand-rubbed into thick cotton canvas, creating a water-resistant, durable fabric that ages beautifully.
+                  We reject the assembly line. Every Noble Carry piece is built from start to finish by a single artisan. This slow, intentional manufacturing process ensures that every stitch is perfect and every bag is built to survive a lifetime.
                 </p>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#2d3a2d]/5 rounded-xl flex items-center justify-center shrink-0">
-                      <Droplet size={24} className="text-[#2d3a2d]" />
+                      <Users size={24} className="text-[#2d3a2d]" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Water-Resistant</h4>
-                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Natural wax repels water without synthetic chemicals</p>
+                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Artisan Skill</h4>
+                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Obsessive attention to detail that machines simply cannot replicate</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#2d3a2d]/5 rounded-xl flex items-center justify-center shrink-0">
-                      <Leaf size={24} className="text-[#2d3a2d]" />
+                      <Zap size={24} className="text-[#2d3a2d]" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Develops Patina</h4>
-                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Each bag becomes unique with use, not worn out</p>
+                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Slow Production</h4>
+                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Quality over speed—taking the time to do it right, every single time</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#2d3a2d]/5 rounded-xl flex items-center justify-center shrink-0">
-                      <Recycle size={24} className="text-[#2d3a2d]" />
+                      <Shield size={24} className="text-[#2d3a2d]" />
                     </div>
                     <div>
-                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Re-Waxable</h4>
-                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Refresh the coating at home—repair, don't replace</p>
+                      <h4 className="font-serif text-xl font-bold text-[#2d3a2d] mb-2">Human Touch</h4>
+                      <p className="text-sm text-[#2d3a2d]/60 font-sans">Each piece carries the unique character and story of its maker</p>
                     </div>
                   </div>
                 </div>
