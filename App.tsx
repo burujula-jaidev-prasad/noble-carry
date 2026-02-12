@@ -187,7 +187,6 @@ const App: React.FC = () => {
             </div>
           </div>
           <div className="max-w-7xl mx-auto mt-24 pt-10 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-xs font-mono uppercase tracking-[0.3em] text-gray-500">
-            <p>© 2024 Noble Carry — RAW. RADICAL. RESPONSIBLE.</p>
             <div className="flex gap-10 mt-6 md:mt-0">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>
