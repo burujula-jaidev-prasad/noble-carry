@@ -32,7 +32,16 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-24 items-start">
-          <div className="sticky top-32 space-y-12">
+          {/* Mobile Header - Visible only on mobile/tablet */}
+          <header className="lg:hidden space-y-6">
+            <h1 className="text-4xl sm:text-5xl font-serif font-black text-[#2d3a2d] uppercase tracking-tighter leading-none heading-academic">{product.name}</h1>
+            <div className="flex items-center gap-6">
+              <p className="font-mono text-xl sm:text-2xl font-bold text-[#2d3a2d] data-youth">{formatPrice(product.price)}</p>
+              <span className="px-4 py-2 bg-[#2d3a2d]/5 text-[#2d3a2d]/60 font-mono text-[10px] font-black uppercase rounded-full tracking-widest border border-[#2d3a2d]/10">Ethically Priced</span>
+            </div>
+          </header>
+
+          <div className="lg:sticky lg:top-32 space-y-12">
             <div className="aspect-[4/5] bg-[#e5e1d8] overflow-hidden rounded-[50px] shadow-2xl">
               <img
                 src={product.image}
@@ -47,7 +56,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
           </div>
 
           <div className="space-y-20">
-            <header>
+            {/* Desktop Header - Visible only on large screens */}
+            <header className="hidden lg:block">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-black text-[#2d3a2d] uppercase tracking-tighter leading-none mb-6 sm:mb-8 heading-academic">{product.name}</h1>
               <div className="flex items-center gap-8">
                 <p className="font-mono text-xl sm:text-2xl font-bold text-[#2d3a2d] data-youth">{formatPrice(product.price)}</p>
