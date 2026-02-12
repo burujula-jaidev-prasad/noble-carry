@@ -9,14 +9,14 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
     price: 7470, // ₹7,470 (was $90)
-    image: '/noblecarry/images/products/hb-daily/main.png',
+    image: '/noble-carry/images/products/hb-daily/main.png',
     gallery: [
-      '/noblecarry/images/products/hb-daily/main.png',
-      '/noblecarry/images/products/hb-daily/detail-1.png',
-      '/noblecarry/images/products/hb-daily/detail-2.png',
-      '/noblecarry/images/products/hb-daily/extra.png',
-      '/noblecarry/images/products/hb-daily/extra-2.png',
-      '/noblecarry/images/products/hb-daily/extra-3.png'
+      '/noble-carry/images/products/hb-daily/main.png',
+      '/noble-carry/images/products/hb-daily/detail-1.png',
+      '/noble-carry/images/products/hb-daily/detail-2.png',
+      '/noble-carry/images/products/hb-daily/extra.png',
+      '/noble-carry/images/products/hb-daily/extra-2.png',
+      '/noble-carry/images/products/hb-daily/extra-3.png'
     ],
     description: 'Your daily companion. Compact, durable, and designed to replace hundreds of disposable bags. Carry what matters, nothing more.',
     impact: {
@@ -31,13 +31,13 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Corporate / Structured',
     price: 14940, // ₹14,940 (was $180)
-    image: '/noblecarry/images/products/handbags/office.png',
+    image: '/noble-carry/images/products/handbags/office.png',
     gallery: [
-      '/noblecarry/images/products/handbags/office.png',
-      '/noblecarry/images/products/handbags/of1.jpeg',
-      '/noblecarry/images/products/handbags/of2.jpeg',
-      '/noblecarry/images/products/handbags/of3.jpeg',
-      '/noblecarry/images/products/handbags/of3_alt.jpeg'
+      '/noble-carry/images/products/handbags/office.png',
+      '/noble-carry/images/products/handbags/of1.jpeg',
+      '/noble-carry/images/products/handbags/of2.jpeg',
+      '/noble-carry/images/products/handbags/of3.jpeg',
+      '/noble-carry/images/products/handbags/of3_alt.jpeg'
     ],
     description: 'Professional elegance meets radical sustainability. Structured design, premium materials, and a statement that you care about more than just style.',
     impact: {
@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Essentials / Night Out',
     price: 6225, // ₹6,225 (was $75)
-    image: '/noblecarry/images/products/handbags/minimal.png',
+    image: '/noble-carry/images/products/handbags/minimal.png',
     description: 'Less is more. A small, rugged pouch for your phone, keys, and cards. Designed for those who travel light.',
     impact: {
       wasteReduced: '0.8kg Fabric Scraps',
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Shopping / Beach',
     price: 4500,
-    image: '/noblecarry/images/products/handbags/tote.png',
+    image: '/noble-carry/images/products/handbags/tote.png',
     description: 'The catch-all carry. Capacious, sturdy, and ready for whatever the day throws in.',
     impact: {
       wasteReduced: '1.2kg Cotton',
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Vintage / Style',
     price: 8900,
-    image: '/noblecarry/images/products/handbags/satchel.png',
+    image: '/noble-carry/images/products/handbags/satchel.png',
     description: 'Timeless design meeting modern ethics. A nod to the past with a vision for the future.',
     impact: {
       wasteReduced: '2.0kg Leather Scraps',
@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Formal / Event',
     price: 5500,
-    image: '/noblecarry/images/products/handbags/clutch.png',
+    image: '/noble-carry/images/products/handbags/clutch.png',
     description: 'Elegant, understated, and completely sustainable. Make a statement without saying a word.',
     impact: {
       wasteReduced: '0.5kg Silk Offcuts',

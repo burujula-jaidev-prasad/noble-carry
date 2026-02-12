@@ -57,7 +57,7 @@ const Home: React.FC = () => {
           <div className="order-1 lg:order-2 relative w-full h-full min-h-[400px] lg:min-h-[550px]">
             <div className="absolute inset-0 rounded-[40px] overflow-hidden shadow-2xl">
               <img
-                src="/noblecarry/images/hero.jpeg"
+                src="/noble-carry/images/hero.jpeg"
                 alt="Sustainable Handbag"
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
               />
