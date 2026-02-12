@@ -12,10 +12,8 @@ const CategoryPage: React.FC = () => {
     return PRODUCTS.filter(p => p.category === type);
   }, [type]);
 
-  const title = type === 'BACKPACKS' ? 'Built for Long Days' : 'Carry Less. Mean More.';
-  const subtitle = type === 'BACKPACKS'
-    ? 'Durable carry for university, work, and the unexpected.'
-    : 'Intentional design for everyday essentials.';
+  const title = 'Carry Less. Mean More.';
+  const subtitle = 'Intentional design for everyday essentials.';
 
   return (
     <div className="min-h-screen bg-[#f2efe8] pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">

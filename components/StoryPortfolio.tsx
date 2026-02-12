@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Package, MapPin, Clock } from 'lucide-react';
 import { PRODUCTS } from '../constants';
+import { formatPrice } from '../utils/currency';
 import LifespanBar from './LifespanBar';
 
 interface StoryPortfolioProps {
-    category?: 'BACKPACKS' | 'HANDBAGS' | 'ALL';
+    category?: 'HANDBAGS' | 'ALL';
 }
 
 const StoryPortfolio: React.FC<StoryPortfolioProps> = ({ category = 'ALL' }) => {
@@ -110,7 +111,7 @@ const StoryPortfolio: React.FC<StoryPortfolioProps> = ({ category = 'ALL' }) => 
                                     </p>
                                 </div>
                                 <p className="font-mono text-2xl font-black text-[#2d3a2d] data-youth">
-                                    ${product.price}
+                                    {formatPrice(product.price)}
                                 </p>
                             </div>
 

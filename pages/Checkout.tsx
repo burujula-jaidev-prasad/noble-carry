@@ -144,7 +144,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cartItems, clearCart }) => {
               </div>
               <div className="flex justify-between">
                 <span>SHIPPING (RADICAL FREE)</span>
-                <span>₹0</span>
+                <span>{formatPrice(0)}</span>
               </div>
               <div className="flex justify-between font-serif font-black text-5xl tracking-tighter text-[#2d3a2d] pt-8 border-t border-[#2d3a2d]/10">
                 <span>TOTAL</span>

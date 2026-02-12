@@ -2,49 +2,6 @@
 import { Product } from './types';
 
 export const PRODUCTS: Product[] = [
-  // BACKPACKS
-  {
-    id: 'bp-everyday',
-    name: 'Everyday Backpack',
-    category: 'BACKPACKS',
-    subCategory: 'Casual / Daily',
-    price: 9960, // ₹9,960 (was $120)
-    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop',
-    description: 'Built for the long haul. This isn\'t a backpack you\'ll replace in two years. Reinforced stitching, water-resistant wax canvas, and a design that gets better with age.',
-    impact: {
-      wasteReduced: '2.5kg Ocean Plastic',
-      lifespan: '15+ Years',
-      materials: ['Reclaimed Wax Canvas', 'Recycled Nylon Lining', 'Upcycled Leather Straps']
-    }
-  },
-  {
-    id: 'bp-work',
-    name: 'Work Backpack',
-    category: 'BACKPACKS',
-    subCategory: 'Professional / Tech',
-    price: 13695, // ₹13,695 (was $165)
-    image: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?q=80&w=1200&auto=format&fit=crop',
-    description: 'Designed for professionals who refuse to compromise. Padded laptop compartment, organized pockets, and a minimalist aesthetic that transitions from office to adventure.',
-    impact: {
-      wasteReduced: '3.2kg Industrial Fabric',
-      lifespan: '20+ Years',
-      materials: ['Heavy-Duty Wax Canvas', 'Recycled Tech Padding', 'Brass Hardware']
-    }
-  },
-  {
-    id: 'bp-travel',
-    name: 'Travel Backpack',
-    category: 'BACKPACKS',
-    subCategory: 'Adventure / Expedition',
-    price: 16600, // ₹16,600 (was $200)
-    image: 'https://images.unsplash.com/photo-1577733966973-d680bffd2e80?q=80&w=1200&auto=format&fit=crop',
-    description: 'For those who live out of a bag. Maximum capacity, minimal footprint. Built to survive years of airports, hostels, and mountain trails.',
-    impact: {
-      wasteReduced: '4.1kg Mixed Textiles',
-      lifespan: '25+ Years',
-      materials: ['Triple-Layer Wax Canvas', 'Recycled Ripstop', 'Reclaimed Buckles']
-    }
-  },
   // HANDBAGS
   {
     id: 'hb-daily',
@@ -52,7 +9,15 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
     price: 7470, // ₹7,470 (was $90)
-    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1200&auto=format&fit=crop',
+    image: '/noblecarry/images/products/hb-daily/main.png',
+    gallery: [
+      '/noblecarry/images/products/hb-daily/main.png',
+      '/noblecarry/images/products/hb-daily/detail-1.png',
+      '/noblecarry/images/products/hb-daily/detail-2.png',
+      '/noblecarry/images/products/hb-daily/extra.png',
+      '/noblecarry/images/products/hb-daily/extra-2.png',
+      '/noblecarry/images/products/hb-daily/extra-3.png'
+    ],
     description: 'Your daily companion. Compact, durable, and designed to replace hundreds of disposable bags. Carry what matters, nothing more.',
     impact: {
       wasteReduced: '1.8kg Textile Waste',
@@ -66,7 +31,14 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Corporate / Structured',
     price: 14940, // ₹14,940 (was $180)
-    image: 'https://images.unsplash.com/photo-1564422170194-896b89110ef8?q=80&w=1200&auto=format&fit=crop',
+    image: '/noblecarry/images/products/handbags/office.png',
+    gallery: [
+      '/noblecarry/images/products/handbags/office.png',
+      '/noblecarry/images/products/handbags/of1.jpeg',
+      '/noblecarry/images/products/handbags/of2.jpeg',
+      '/noblecarry/images/products/handbags/of3.jpeg',
+      '/noblecarry/images/products/handbags/of3_alt.jpeg'
+    ],
     description: 'Professional elegance meets radical sustainability. Structured design, premium materials, and a statement that you care about more than just style.',
     impact: {
       wasteReduced: '2.9kg Premium Textiles',
@@ -80,12 +52,54 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Essentials / Night Out',
     price: 6225, // ₹6,225 (was $75)
-    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=1200&auto=format&fit=crop',
+    image: '/noblecarry/images/products/handbags/minimal.png',
     description: 'Less is more. A small, rugged pouch for your phone, keys, and cards. Designed for those who travel light.',
     impact: {
       wasteReduced: '0.8kg Fabric Scraps',
       lifespan: '12+ Years',
       materials: ['Reclaimed Canvas Scraps', 'Paracord Handle']
+    }
+  },
+  {
+    id: 'hb-tote',
+    name: 'Market Tote',
+    category: 'HANDBAGS',
+    subCategory: 'Shopping / Beach',
+    price: 4500,
+    image: '/noblecarry/images/products/handbags/tote.png',
+    description: 'The catch-all carry. Capacious, sturdy, and ready for whatever the day throws in.',
+    impact: {
+      wasteReduced: '1.2kg Cotton',
+      lifespan: '10+ Years',
+      materials: ['Organic Cotton', 'Hemp']
+    }
+  },
+  {
+    id: 'hb-satchel',
+    name: 'Classic Satchel',
+    category: 'HANDBAGS',
+    subCategory: 'Vintage / Style',
+    price: 8900,
+    image: '/noblecarry/images/products/handbags/satchel.png',
+    description: 'Timeless design meeting modern ethics. A nod to the past with a vision for the future.',
+    impact: {
+      wasteReduced: '2.0kg Leather Scraps',
+      lifespan: '25+ Years',
+      materials: ['Upcycled Leather', 'Brass']
+    }
+  },
+  {
+    id: 'hb-clutch',
+    name: 'Evening Clutch',
+    category: 'HANDBAGS',
+    subCategory: 'Formal / Event',
+    price: 5500,
+    image: '/noblecarry/images/products/handbags/clutch.png',
+    description: 'Elegant, understated, and completely sustainable. Make a statement without saying a word.',
+    impact: {
+      wasteReduced: '0.5kg Silk Offcuts',
+      lifespan: '15+ Years',
+      materials: ['Recycled Silk', 'Bamboo Frame']
     }
   }
 ];

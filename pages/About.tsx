@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import workshopImage from '../assets/story-workshop.jpg';
-import movementImage from '../assets/story-movement.jpg';
+import workshopImage from '../src/assets/story-workshop.jpg';
+import movementImage from '../src/assets/story-movement.jpg';
 
 const About: React.FC = () => {
   return (
@@ -32,9 +32,9 @@ const About: React.FC = () => {
 
         <div className="space-y-48">
           <section className="max-w-5xl mx-auto text-center">
-            <h3 className="text-3xl md:text-4xl font-serif font-black uppercase tracking-tighter mb-10 text-[#2d3a2d]">Why only Backpacks <br /> & Handbags?</h3>
+            <h3 className="text-3xl md:text-4xl font-serif font-black uppercase tracking-tighter mb-10 text-[#2d3a2d]">Why only Handbags?</h3>
             <p className="font-mono text-sm md:text-base text-[#2d3a2d]/50 leading-relaxed uppercase tracking-widest">
-              Because we believe in mastery. By focusing on only two categories, we can obsess over every stitch, every buckle, and every material choice. We don't want to sell you everything. We want to sell you the last bag you'll ever need.
+              Because we believe in mastery. By focusing on a single category, we can obsess over every stitch, every buckle, and every material choice. We don't want to sell you everything. We want to sell you the last bag you'll ever need.
             </p>
           </section>
 

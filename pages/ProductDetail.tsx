@@ -41,8 +41,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
               />
             </div>
             <div className="grid grid-cols-2 gap-8">
-              <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?q=80&w=800" alt="Material Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
-              <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800" alt="Craft Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
+              <img src={product.gallery?.[1] || "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?q=80&w=800"} alt="Material Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
+              <img src={product.gallery?.[2] || "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800"} alt="Craft Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
             </div>
           </div>
 
@@ -157,6 +157,29 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
                 </div>
               </div>
             </div>
+            {/* Product Showcase */}
+            {product.category === 'HANDBAGS' && (
+              <div className="pt-24 border-t border-[#2d3a2d]/10 space-y-12">
+                <h3 className="font-serif text-3xl font-bold uppercase text-[#2d3a2d] tracking-tight heading-academic text-center">
+                  More from the Collection
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                  {PRODUCTS.filter(p => p.category === 'HANDBAGS' && p.id !== product.id).slice(0, 5).map(bg => (
+                    <div key={bg.id} className="group cursor-pointer" onClick={() => {
+                      navigate(`/product/${bg.id}`);
+                      window.scrollTo(0, 0);
+                    }}>
+                      <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-md transition-all">
+                        <img src={bg.image} alt={bg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      </div>
+                      <h4 className="font-serif text-lg font-bold text-[#2d3a2d] leading-none mb-1">{bg.name}</h4>
+                      <p className="font-mono text-xs text-[#2d3a2d]/60 uppercase tracking-widest mb-2">{bg.subCategory}</p>
+                      <p className="font-mono text-sm font-bold text-[#2d3a2d]">{formatPrice(bg.price)}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 
-export type Category = 'BACKPACKS' | 'HANDBAGS';
+export type Category = 'HANDBAGS';
 
 export interface Product {
   id: string;
@@ -14,6 +14,7 @@ export interface Product {
     lifespan: string;
     materials: string[];
   };
+  gallery?: string[];
 }
 
 export interface CartItem extends Product {

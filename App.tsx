@@ -23,12 +23,6 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
     setActiveDropdown(null);
   }, [location]);
 
-  const backpackProducts = [
-    { id: 'bp-everyday', name: 'Everyday Backpack' },
-    { id: 'bp-work', name: 'Work Backpack' },
-    { id: 'bp-travel', name: 'Travel Backpack' }
-  ];
-
   const handbagProducts = [
     { id: 'hb-daily', name: 'Daily Handbag' },
     { id: 'hb-office', name: 'Office Handbag' },
@@ -47,31 +41,6 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
 
       <div className="flex items-center gap-10">
         <div className="hidden md:flex gap-10 font-mono text-sm uppercase tracking-widest text-[#2d3a2d]">
-          {/* Backpacks Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown('backpacks')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <Link to="/category/BACKPACKS" className="hover:text-[#556b2f] transition-colors">
-              Backpacks
-            </Link>
-            {activeDropdown === 'backpacks' && (
-              <div className="absolute top-full left-0 pt-2">
-                <div className="bg-white shadow-xl rounded-2xl overflow-hidden min-w-[220px] border border-[#2d3a2d]/10">
-                  {backpackProducts.map((product) => (
-                    <Link
-                      key={product.id}
-                      to={`/product/${product.id}`}
-                      className="block px-6 py-3 hover:bg-[#f2efe8] transition-colors text-[#2d3a2d] hover:text-[#556b2f] border-b border-[#2d3a2d]/5 last:border-b-0"
-                    >
-                      {product.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
 
           {/* Handbags Dropdown */}
           <div
@@ -127,7 +96,6 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
           </button>
 
           <nav className="flex flex-col items-center justify-center gap-12">
-            <Link to="/category/BACKPACKS" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Backpacks</Link>
             <Link to="/category/HANDBAGS" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Handbags</Link>
             <Link to="/impact" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Impact</Link>
             <Link to="/about" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Story</Link>
@@ -204,7 +172,6 @@ const App: React.FC = () => {
             <div>
               <h4 className="font-bold uppercase mb-6 tracking-[0.3em] text-sm">Explore</h4>
               <ul className="font-mono text-sm space-y-4 text-gray-400 uppercase tracking-widest">
-                <li><Link to="/category/BACKPACKS" className="hover:text-white transition-colors">Backpacks</Link></li>
                 <li><Link to="/category/HANDBAGS" className="hover:text-white transition-colors">Handbags</Link></li>
                 <li><Link to="/impact" className="hover:text-white transition-colors">Impact Dashboard</Link></li>
                 <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>

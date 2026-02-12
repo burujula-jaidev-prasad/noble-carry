@@ -6,14 +6,6 @@ import ScrollReveal from '../components/ScrollReveal';
 const Collections: React.FC = () => {
     const categories = [
         {
-            id: 'BACKPACKS',
-            title: 'Backpacks',
-            subtitle: 'Built for long days. Longer life.',
-            description: 'From college to work to adventure, our backpacks are engineered for heavy use and designed to age beautifully.',
-            image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1200&auto=format&fit=crop',
-            products: ['Everyday Backpack', 'Work Backpack', 'Travel Backpack']
-        },
-        {
             id: 'HANDBAGS',
             title: 'Handbags',
             subtitle: 'Carry less. Mean more.',
@@ -36,7 +28,7 @@ const Collections: React.FC = () => {
                             Choose Your <br />Carry
                         </h1>
                         <p className="text-base sm:text-lg md:text-xl text-[#2d3a2d]/70 font-sans max-w-2xl mx-auto leading-relaxed">
-                            We focus on only two categories. Why? Because mastery requires focus.
+                            We focus on only one category. Why? Because mastery requires focus.
                             Every stitch, every buckle, every material choice is obsessed over.
                         </p>
                     </header>

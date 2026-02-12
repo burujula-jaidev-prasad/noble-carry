@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { ArrowRight, Shield, Droplet, Leaf, Users, Recycle } from 'lucide-react';
-import ChoiceGateway from '../components/ChoiceGateway';
 import StoryPortfolio from '../components/StoryPortfolio';
 import TransparencySection from '../components/TransparencySection';
 import LifespanBar from '../components/LifespanBar';
@@ -12,22 +11,7 @@ import CounterAnimation from '../components/CounterAnimation';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
-  const [hasChosen, setHasChosen] = useState<boolean>(false);
 
-  // Check if user has already made a choice in this session
-  useEffect(() => {
-    const choice = sessionStorage.getItem('noble_carry_choice');
-    if (choice) setHasChosen(true);
-  }, []);
-
-  const handleChoice = (choice: 'BACKPACKS' | 'HANDBAGS') => {
-    setHasChosen(true);
-  };
-
-  // Show Choice Gateway on first visit
-  if (!hasChosen) {
-    return <ChoiceGateway onChoice={handleChoice} />;
-  }
 
   return (
     <main className="relative bg-[#f2efe8] animate-in fade-in duration-1000">
@@ -73,8 +57,8 @@ const Home: React.FC = () => {
           <div className="order-1 lg:order-2 relative w-full h-full min-h-[400px] lg:min-h-[550px]">
             <div className="absolute inset-0 rounded-[40px] overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1547949003-9792a18a2601?q=80&w=2070&auto=format&fit=crop"
-                alt="Sustainable Waxed Canvas Backpack"
+                src="/noblecarry/images/hero.jpeg"
+                alt="Sustainable Handbag"
                 className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
               />
               <div className="absolute bottom-10 left-10 p-8 bg-white/90 backdrop-blur-md rounded-2xl flex items-center gap-6 max-w-xs shadow-xl">
@@ -337,14 +321,8 @@ const Home: React.FC = () => {
         </h2>
         <div className="flex flex-wrap justify-center gap-10">
           <button
-            onClick={() => navigate('/category/BACKPACKS')}
-            className="px-14 py-7 bg-[#2d3a2d] text-white font-bold uppercase tracking-widest text-base rounded-full hover:scale-105 transition-all flex items-center gap-4 shadow-xl"
-          >
-            Backpacks <ArrowRight size={24} />
-          </button>
-          <button
             onClick={() => navigate('/category/HANDBAGS')}
-            className="px-14 py-7 border-2 border-[#2d3a2d] text-[#2d3a2d] font-bold uppercase tracking-widest text-base rounded-full hover:bg-[#2d3a2d] hover:text-white transition-all flex items-center gap-4 shadow-sm"
+            className="px-14 py-7 bg-[#2d3a2d] text-white font-bold uppercase tracking-widest text-base rounded-full hover:scale-105 transition-all flex items-center gap-4 shadow-xl"
           >
             Handbags <ArrowRight size={24} />
           </button>
