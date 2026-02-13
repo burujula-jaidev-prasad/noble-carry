@@ -33,8 +33,8 @@ const Home: React.FC = () => {
                   'Crafted from Ocean Waste.',
                   'Premium Quality, Zero Guilt.'
                 ]}
-                typingSpeed={50}
-                deletingSpeed={30}
+                typingSpeed={60}
+                deletingSpeed={60}
                 pauseDuration={2500}
               />
             </h1>
