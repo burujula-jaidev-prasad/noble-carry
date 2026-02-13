@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, ArrowRight, Zap, RefreshCw, Users, ShieldCheck, Globe } from 'lucide-react';
+import { ShoppingBag, Menu, X, ArrowRight, Zap, RefreshCw, Users, ShieldCheck, Globe, Instagram, Mail } from 'lucide-react';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import ProductDetail from './pages/ProductDetail';
@@ -67,6 +67,20 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
 
           <Link to="/impact" className="hover:text-[#556b2f] transition-colors">Impact</Link>
           <Link to="/about" className="hover:text-[#556b2f] transition-colors">Story</Link>
+          <a
+            href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2 bg-[#2d3a2d] text-[#f2efe8] rounded-full font-bold hover:bg-[#1a241a] transition-all transform hover:scale-105 active:scale-95 text-xs shadow-md"
+          >
+            Join us <Instagram size={14} />
+          </a>
+          <a
+            href="mailto:bjaidevprasad@gmail.com"
+            className="flex items-center gap-2 px-5 py-2 border-2 border-[#2d3a2d] text-[#2d3a2d] rounded-full font-bold hover:bg-[#2d3a2d] hover:text-[#f2efe8] transition-all transform hover:scale-105 active:scale-95 text-xs shadow-sm"
+          >
+            Mail us <Mail size={14} />
+          </a>
         </div>
 
         <button onClick={onCartOpen} className="relative group p-2 text-[#2d3a2d] hover:text-[#556b2f] transition-colors">
@@ -109,6 +123,20 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
             </div>
             <Link to="/impact" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Impact</Link>
             <Link to="/about" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Story</Link>
+            <a
+              href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-2xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors"
+            >
+              Join us <Instagram size={24} />
+            </a>
+            <a
+              href="mailto:bjaidevprasad@gmail.com"
+              className="flex items-center gap-3 text-2xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors"
+            >
+              Mail us <Mail size={24} />
+            </a>
           </nav>
         </div>
       )}
@@ -185,6 +213,13 @@ const App: React.FC = () => {
                 <li><Link to="/category/HANDBAGS" className="hover:text-white transition-colors">Handbags</Link></li>
                 <li><Link to="/impact" className="hover:text-white transition-colors">Impact Dashboard</Link></li>
                 <li><Link to="/about" className="hover:text-white transition-colors">Our Story</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold uppercase mb-6 tracking-[0.3em] text-sm">Contact</h4>
+              <ul className="font-mono text-sm space-y-4 text-gray-400 uppercase tracking-widest">
+                <li><a href="mailto:bjaidevprasad@gmail.com" className="hover:text-white transition-colors">bjaidevprasad@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
               </ul>
             </div>
           </div>

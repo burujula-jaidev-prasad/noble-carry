@@ -29,6 +29,23 @@ const Home: React.FC = () => {
               Recrafted from 100% ocean plastic. Designed for a lifetime of adventure. <span className="font-bold text-[#2d3a2d]">One bag = 12kg of plastic removed.</span>
             </p>
 
+            <div className="flex flex-wrap gap-6 mb-10">
+              <a
+                href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.3em] text-[#2d3a2d]/60 hover:text-[#556b2f] transition-colors"
+              >
+                @noblecarry1995
+              </a>
+              <a
+                href="mailto:bjaidevprasad@gmail.com"
+                className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.3em] text-[#2d3a2d]/60 hover:text-[#556b2f] transition-colors"
+              >
+                Queries: bjaidevprasad@gmail.com
+              </a>
+            </div>
+
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-8">
               <button
                 onClick={() => navigate('/collections')}
