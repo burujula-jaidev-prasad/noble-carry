@@ -8,6 +8,7 @@ import TransparencySection from '../components/TransparencySection';
 import LifespanBar from '../components/LifespanBar';
 import ScrollReveal from '../components/ScrollReveal';
 import CounterAnimation from '../components/CounterAnimation';
+import TypingEffect from '../components/TypingEffect';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -22,8 +23,20 @@ const Home: React.FC = () => {
             <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/50 mb-8">
               Sustainable by Design
             </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-serif font-bold text-[#2d3a2d] leading-[0.9] mb-6 sm:mb-8 uppercase tracking-tighter heading-academic">
-              Carry the <br /> Future, <br /> Not the <br /> Waste.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-serif font-bold text-[#2d3a2d] leading-[0.9] mb-6 sm:mb-8 uppercase tracking-tighter heading-academic min-h-[200px] sm:min-h-[240px] md:min-h-[280px]">
+              <TypingEffect
+                phrases={[
+                  'Carry the Future, Not the Waste.',
+                  'Style Meets Sustainability.',
+                  'Designed for Decades, Not Days.',
+                  'One Bag = 12kg Plastic Removed.',
+                  'Crafted from Ocean Waste.',
+                  'Premium Quality, Zero Guilt.'
+                ]}
+                typingSpeed={80}
+                deletingSpeed={40}
+                pauseDuration={2500}
+              />
             </h1>
             <p className="text-sm sm:text-base text-[#2d3a2d]/70 mb-8 sm:mb-10 leading-relaxed font-sans">
               Recrafted from 100% ocean plastic. Designed for a lifetime of adventure. <span className="font-bold text-[#2d3a2d]">One bag = 12kg of plastic removed.</span>
@@ -95,12 +108,12 @@ const Home: React.FC = () => {
       {/* ELEVATE YOUR STYLE POSTER SECTION */}
       <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-[#f2efe8] to-white overflow-hidden">
         <ScrollReveal direction="up">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
               <img
                 src="/noble-carry/images/elevate-style-poster.png"
                 alt="Elevate Your Style with Noble Carry"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
