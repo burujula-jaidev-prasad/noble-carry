@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, X, Send, Gamepad2, ArrowRight, User, Sparkles } from 'lucide-react';
+import { MessageSquare, X, Send, Gamepad2, ArrowRight, User, Sparkles, RefreshCcw } from 'lucide-react';
 import { PRODUCTS } from '../constants';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -51,6 +51,14 @@ const EmilyChatBot: React.FC = () => {
             options,
         };
         setMessages(prev => [...prev, newMessage]);
+    };
+
+    const startNewChat = () => {
+        setMessages([]);
+        setUserName(null);
+        setStep('getName');
+        setRecommendationParams({ purpose: '', budget: '', material: '' });
+        setHasShownOffer(false);
     };
 
     const handleSend = (textOverride?: string) => {
@@ -251,7 +259,11 @@ const EmilyChatBot: React.FC = () => {
                     className="w-16 h-16 bg-[#2d3a2d] text-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group"
                 >
                     <div className="absolute inset-0 bg-[#556b2f] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                    <MessageSquare size={28} className="relative z-10" />
+                    <img
+                        src="/noble-carry/emily-profile.png"
+                        alt="Chat with Emily"
+                        className="w-full h-full object-cover relative z-10 p-0"
+                    />
                     {messages.length === 0 && (
                         <motion.div
                             animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
@@ -274,8 +286,12 @@ const EmilyChatBot: React.FC = () => {
                         {/* Header */}
                         <div className="bg-[#2d3a2d] p-6 text-[#f2efe8] flex justify-between items-center">
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-[#556b2f] rounded-full flex items-center justify-center relative">
-                                    <span className="text-xl font-serif">E</span>
+                                <div className="w-12 h-12 bg-[#556b2f] rounded-full flex items-center justify-center relative overflow-hidden">
+                                    <img
+                                        src="/noble-carry/emily-profile.png"
+                                        alt="Emily"
+                                        className="w-full h-full object-cover"
+                                    />
                                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#2d3a2d] rounded-full" />
                                 </div>
                                 <div>
@@ -283,12 +299,21 @@ const EmilyChatBot: React.FC = () => {
                                     <span className="text-[10px] uppercase tracking-widest opacity-60">Sustainability Assistant</span>
                                 </div>
                             </div>
-                            <button
-                                onClick={() => setIsOpen(false)}
-                                className="p-2 hover:bg-white/10 rounded-full transition-colors"
-                            >
-                                <X size={24} />
-                            </button>
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={startNewChat}
+                                    title="New Chat"
+                                    className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                                >
+                                    <RefreshCcw size={20} />
+                                </button>
+                                <button
+                                    onClick={() => setIsOpen(false)}
+                                    className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                                >
+                                    <X size={24} />
+                                </button>
+                            </div>
                         </div>
 
                         {/* Messages Area */}
