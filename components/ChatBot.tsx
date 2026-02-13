@@ -256,7 +256,7 @@ const EmilyChatBot: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setIsOpen(true)}
-                    className="w-20 h-20 bg-[#2d3a2d] text-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group"
+                    className="w-24 h-24 bg-[#2d3a2d] text-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group"
                 >
                     <div className="absolute inset-0 bg-[#556b2f] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                     <img
@@ -286,7 +286,7 @@ const EmilyChatBot: React.FC = () => {
                         {/* Header */}
                         <div className="bg-[#2d3a2d] p-6 text-[#f2efe8] flex justify-between items-center">
                             <div className="flex items-center gap-4">
-                                <div className="w-16 h-16 bg-[#556b2f] rounded-full flex items-center justify-center relative overflow-hidden">
+                                <div className="w-20 h-20 bg-[#556b2f] rounded-full flex items-center justify-center relative overflow-hidden">
                                     <img
                                         src="/noble-carry/emily-profile.png"
                                         alt="Emily"
