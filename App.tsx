@@ -11,6 +11,7 @@ import Checkout from './pages/Checkout';
 import Cart from './components/Cart';
 import BackgroundAnimations from './components/BackgroundAnimations';
 import Collections from './pages/Collections';
+import { PRODUCTS } from './constants';
 import { CartItem, Product } from './types';
 
 const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartCount, onCartOpen }) => {
@@ -23,11 +24,7 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
     setActiveDropdown(null);
   }, [location]);
 
-  const handbagProducts = [
-    { id: 'hb-daily', name: 'Daily Handbag' },
-    { id: 'hb-office', name: 'Office Handbag' },
-    { id: 'hb-minimal', name: 'Minimal Carry Bag' }
-  ];
+  const handbags = PRODUCTS.filter(p => p.category === 'HANDBAGS');
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-8 py-2 bg-[#f2efe8]/95 backdrop-blur-sm border-b border-[#2d3a2d]/10">
@@ -53,8 +50,8 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
             </Link>
             {activeDropdown === 'handbags' && (
               <div className="absolute top-full left-0 pt-2">
-                <div className="bg-white shadow-xl rounded-2xl overflow-hidden min-w-[220px] border border-[#2d3a2d]/10">
-                  {handbagProducts.map((product) => (
+                <div className="bg-white shadow-xl rounded-2xl overflow-hidden min-w-[240px] border border-[#2d3a2d]/10">
+                  {handbags.map((product) => (
                     <Link
                       key={product.id}
                       to={`/product/${product.id}`}
@@ -87,7 +84,7 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
       </div>
 
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full min-h-screen bg-[#8fbc8f]/80 backdrop-blur-sm text-white z-[100] flex flex-col items-center justify-center p-8">
+        <div className="fixed top-0 left-0 w-full h-full min-h-screen bg-[#8fbc8f]/95 backdrop-blur-md text-white z-[100] flex flex-col items-center justify-center p-8 overflow-y-auto">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-[101]"
@@ -95,10 +92,23 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
             <X size={32} />
           </button>
 
-          <nav className="flex flex-col items-center justify-center gap-12">
-            <Link to="/category/HANDBAGS" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Handbags</Link>
-            <Link to="/impact" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Impact</Link>
-            <Link to="/about" className="text-4xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Story</Link>
+          <nav className="flex flex-col items-center justify-center gap-8 py-20">
+            <div className="flex flex-col items-center gap-4">
+              <Link to="/category/HANDBAGS" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors border-b-4 border-white pb-2">Handbags</Link>
+              <div className="flex flex-col items-center gap-2">
+                {handbags.map(product => (
+                  <Link
+                    key={product.id}
+                    to={`/product/${product.id}`}
+                    className="text-lg font-mono uppercase tracking-widest text-white/70 hover:text-white"
+                  >
+                    {product.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <Link to="/impact" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Impact</Link>
+            <Link to="/about" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Story</Link>
           </nav>
         </div>
       )}
