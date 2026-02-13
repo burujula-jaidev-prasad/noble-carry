@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Formal / Event',
     price: 5500,
-    image: '/noble-carry/images/products/handbags/clutch.png',
+    image: '/noble-carry/images/products/handbags/clutch.jpeg',
     description: 'Elegant, understated, and completely sustainable. Make a statement without saying a word.',
     impact: {
       wasteReduced: '0.5kg Silk Offcuts',
