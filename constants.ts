@@ -61,7 +61,7 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Shopping / Beach',
     price: 14500, // ₹14,500
-    image: '/noble-carry/images/products/handbags/tote.png',
+    image: '/noble-carry/images/products/handbags/tote_white.png',
     description: 'The catch-all carry. Capacious, sturdy, and ready for whatever the day throws in.',
     impact: {
       wasteReduced: '1.2kg Cotton',
