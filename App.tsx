@@ -10,6 +10,7 @@ import Impact from './pages/Impact';
 import Checkout from './pages/Checkout';
 import Cart from './components/Cart';
 import BackgroundAnimations from './components/BackgroundAnimations';
+import ScrollToTop from './components/ScrollToTop';
 import Collections from './pages/Collections';
 import { PRODUCTS } from './constants';
 import { CartItem, Product } from './types';
@@ -140,7 +141,7 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-2xl font-black uppercase tracking-tighter text-[#2d3a2d]/70 hover:text-[#2d3a2d] transition-colors"
             >
-              Play & Earn Coupon <Gamepad2 size={24} />
+              Play & Earn Coupoun <Gamepad2 size={24} />
             </a>
             <a
               href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
@@ -198,6 +199,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <BackgroundAnimations />
       <div className="min-h-screen bg-[#f2efe8] relative">
         <Header cartCount={cartCount} onCartOpen={() => setIsCartOpen(true)} />

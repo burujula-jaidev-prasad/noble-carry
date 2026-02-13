@@ -34,7 +34,7 @@ const BackgroundAnimations: React.FC = () => {
                         y: ['0vh', '110vh'],
                         x: [0, Math.sin(element.id) * 50, 0],
                         rotate: [0, 360],
-                        opacity: [0, 0.15, 0.15, 0]
+                        opacity: [0, 0.4, 0.4, 0]
                     }}
                     transition={{
                         duration: element.duration,
@@ -53,13 +53,13 @@ const BackgroundAnimations: React.FC = () => {
                         <path
                             d="M12 2C12 2 7 4 7 12C7 16 9 20 12 22C15 20 17 16 17 12C17 4 12 2 12 2Z"
                             fill="#556b2f"
-                            opacity="0.2"
+                            opacity="0.5"
                         />
                         <path
                             d="M12 2L12 22"
                             stroke="#2d3a2d"
                             strokeWidth="1"
-                            opacity="0.3"
+                            opacity="0.6"
                         />
                     </svg>
                 </motion.div>
@@ -77,7 +77,7 @@ const BackgroundAnimations: React.FC = () => {
                     animate={{
                         y: ['0vh', '105vh'],
                         rotate: [0, 180, 360],
-                        opacity: [0, 0.1, 0.1, 0]
+                        opacity: [0, 0.3, 0.3, 0]
                     }}
                     transition={{
                         duration: element.duration,
@@ -109,7 +109,7 @@ const BackgroundAnimations: React.FC = () => {
                         y: ['0vh', '110vh'],
                         rotate: [0, -360],
                         scale: [0.8, 1.2, 0.8],
-                        opacity: [0, 0.08, 0.08, 0]
+                        opacity: [0, 0.25, 0.25, 0]
                     }}
                     transition={{
                         duration: element.duration,
@@ -128,7 +128,7 @@ const BackgroundAnimations: React.FC = () => {
                         <path
                             d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
                             fill="#2d3a2d"
-                            opacity="0.15"
+                            opacity="0.4"
                         />
                     </svg>
                 </motion.div>
@@ -150,7 +150,7 @@ const BackgroundAnimations: React.FC = () => {
             <motion.div
                 className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl"
                 style={{
-                    background: 'radial-gradient(circle, rgba(85,107,47,0.05) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(85,107,47,0.15) 0%, transparent 70%)',
                 }}
                 animate={{
                     scale: [1, 1.2, 1],
@@ -167,7 +167,7 @@ const BackgroundAnimations: React.FC = () => {
             <motion.div
                 className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl"
                 style={{
-                    background: 'radial-gradient(circle, rgba(215,191,162,0.05) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(215,191,162,0.15) 0%, transparent 70%)',
                 }}
                 animate={{
                     scale: [1, 1.3, 1],
