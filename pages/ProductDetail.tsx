@@ -53,10 +53,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
                 className="w-full h-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
               />
             </div>
-            <div className="grid grid-cols-2 gap-8">
-              <img src={product.gallery?.[1] || "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?q=80&w=800"} alt="Material Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
-              <img src={product.gallery?.[2] || "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=800"} alt="Craft Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
-            </div>
+            {product.gallery && product.gallery.length >= 3 && (
+              <div className="grid grid-cols-2 gap-8">
+                <img src={product.gallery[1]} alt="Material Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
+                <img src={product.gallery[2]} alt="Craft Detail" className="w-full aspect-square object-cover rounded-[32px] shadow-lg grayscale hover:grayscale-0 transition-all" />
+              </div>
+            )}
           </div>
 
           <div className="space-y-20">
