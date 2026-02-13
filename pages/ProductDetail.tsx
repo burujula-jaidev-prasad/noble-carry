@@ -29,7 +29,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
   }
 
   return (
-    <div className="bg-[#f4f1ea] min-h-screen pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
+    <div className="bg-transparent min-h-screen pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <button onClick={() => navigate(-1)} className="flex items-center gap-3 font-mono text-sm uppercase tracking-widest mb-16 hover:-translate-x-3 transition-transform text-[#2d3a2d]/60">
           <ArrowLeft size={24} /> Go Back
@@ -72,7 +72,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
             </header>
 
             {/* Enhanced Lifespan Visualization */}
-            <div className="bg-white p-12 rounded-[40px] shadow-sm border border-[#2d3a2d]/5">
+            <div className="bg-[#f4f1ea]/40 backdrop-blur-md p-12 rounded-[40px] shadow-sm border border-[#2d3a2d]/5">
               <h3 className="font-mono text-sm uppercase tracking-[0.4em] text-[#2d3a2d]/40 mb-8">
                 Expected Lifespan
               </h3>
@@ -115,7 +115,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
             </div>
 
             {/* Impact Snapshot */}
-            <div className="bg-[#2d3a2d] text-[#f2efe8] p-16 space-y-16 rounded-[50px] shadow-2xl relative overflow-hidden">
+            <div className="bg-[#2d3a2d]/90 backdrop-blur-md text-[#f2efe8] p-16 space-y-16 rounded-[50px] shadow-2xl relative overflow-hidden">
               <div className="absolute top-0 right-0 p-10 opacity-5">
                 <ShieldCheck size={120} />
               </div>
@@ -164,7 +164,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
             {/* Repair Philosophy */}
             <div className="pt-24 border-t border-[#2d3a2d]/10 space-y-12">
               <div className="flex gap-10 items-start">
-                <div className="p-6 bg-white rounded-3xl shadow-sm border border-[#2d3a2d]/5">
+                <div className="p-6 bg-white/40 backdrop-blur-sm rounded-3xl shadow-sm border border-[#2d3a2d]/5">
                   <RefreshCw size={48} className="text-[#2d3a2d]/40" />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
                       navigate(`/product/${bg.id}`);
                       window.scrollTo(0, 0);
                     }}>
-                      <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-md transition-all">
+                      <div className="aspect-[3/4] bg-white/40 backdrop-blur-sm rounded-2xl overflow-hidden mb-4 shadow-sm group-hover:shadow-md transition-all">
                         <img src={bg.image} alt={bg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                       </div>
                       <h4 className="font-serif text-lg font-bold text-[#2d3a2d] leading-none mb-1">{bg.name}</h4>

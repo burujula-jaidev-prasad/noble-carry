@@ -27,7 +27,7 @@ const TransparencySection: React.FC = () => {
     ];
 
     return (
-        <section className="py-32 bg-[#f2efe8] px-6">
+        <section className="py-32 bg-transparent px-6">
             <div className="max-w-7xl mx-auto">
                 <header className="mb-20">
                     <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-6">
@@ -62,7 +62,7 @@ const TransparencySection: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="mt-20 p-10 bg-white/60 rounded-3xl border border-[#2d3a2d]/10">
+                <div className="mt-20 p-10 bg-[#f4f1ea]/40 backdrop-blur-sm rounded-3xl border border-[#2d3a2d]/10">
                     <p className="font-mono text-sm text-[#2d3a2d]/60 text-center uppercase tracking-widest">
                         "We're not perfect. We're just committed to getting better." — The Noble Carry Team
                     </p>

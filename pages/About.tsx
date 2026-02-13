@@ -6,7 +6,7 @@ import movementImage from '../src/assets/story-movement.jpg';
 
 const About: React.FC = () => {
   return (
-    <div className="bg-[#f4f1ea] pt-32 pb-20">
+    <div className="bg-transparent pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center mb-40">
           <div>
@@ -39,15 +39,15 @@ const About: React.FC = () => {
           </section>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="p-16 bg-white rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
+            <div className="p-16 bg-[#f4f1ea]/40 backdrop-blur-sm rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
               <h4 className="text-xl font-serif font-black uppercase mb-4 text-[#2d3a2d]">Responsible Materials</h4>
               <p className="font-mono text-base text-[#2d3a2d]/50 uppercase tracking-widest leading-relaxed">From waxed organic canvas to recycled ocean plastic, we prioritize materials that give more than they take.</p>
             </div>
-            <div className="p-16 bg-white rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
+            <div className="p-16 bg-[#f4f1ea]/40 backdrop-blur-sm rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
               <h4 className="text-xl font-serif font-black uppercase mb-4 text-[#2d3a2d]">Designed to Last</h4>
               <p className="font-mono text-base text-[#2d3a2d]/50 uppercase tracking-widest leading-relaxed">Fast fashion is a trap. Our bags are engineered for heavy use, aging beautifully into unique pieces of your story.</p>
             </div>
-            <div className="p-16 bg-white rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
+            <div className="p-16 bg-[#f4f1ea]/40 backdrop-blur-sm rounded-[40px] shadow-sm border-t-8 border-[#2d3a2d]">
               <h4 className="text-xl font-serif font-black uppercase mb-4 text-[#2d3a2d]">Ethically Made</h4>
               <p className="font-mono text-base text-[#2d3a2d]/50 uppercase tracking-widest leading-relaxed">No sweatshops. No secrets. We pay living wages and support community growth where our products are made.</p>
             </div>

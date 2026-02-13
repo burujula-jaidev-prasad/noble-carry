@@ -12,7 +12,7 @@ const data = [
 
 const Impact: React.FC = () => {
   return (
-    <div className="pt-32 pb-20 px-6 md:px-12 bg-[#f4f1ea] min-h-screen">
+    <div className="pt-32 pb-20 px-6 md:px-12 bg-transparent min-h-screen">
       <div className="max-w-7xl mx-auto">
         <header className="mb-24 text-center">
           <h2 className="text-sm font-mono uppercase tracking-[0.6em] text-[#2d3a2d]/40 mb-8">Real-Time Responsibility</h2>
@@ -23,7 +23,7 @@ const Impact: React.FC = () => {
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
-          <div className="bg-white p-12 md:p-16 rounded-[50px] shadow-2xl border-t-[12px] border-[#2d3a2d]">
+          <div className="bg-[#f4f1ea]/40 backdrop-blur-md p-12 md:p-16 rounded-[50px] shadow-2xl border-t-[12px] border-[#2d3a2d]">
             <h3 className="text-2xl font-serif font-black uppercase mb-8 text-[#2d3a2d] tracking-tight">Resource Reclamation</h3>
             <div className="h-[280px]">
               <ResponsiveContainer width="100%" height="100%">
@@ -42,7 +42,7 @@ const Impact: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8">
-            <div className="bg-[#2d3a2d] text-[#f2efe8] p-10 md:p-12 rounded-[40px] flex items-center gap-10 group shadow-xl">
+            <div className="bg-[#2d3a2d]/90 backdrop-blur-md text-[#f2efe8] p-10 md:p-12 rounded-[40px] flex items-center gap-10 group shadow-xl">
               <div className="w-16 h-16 bg-white/10 group-hover:bg-white/20 transition-colors flex items-center justify-center rounded-[20px] shrink-0">
                 <Globe size={36} />
               </div>
@@ -51,7 +51,7 @@ const Impact: React.FC = () => {
                 <p className="font-mono text-base text-white/50 uppercase tracking-widest font-bold">Liters of water saved this month</p>
               </div>
             </div>
-            <div className="bg-white p-10 md:p-12 rounded-[40px] flex items-center gap-10 border border-[#2d3a2d]/5 group shadow-xl">
+            <div className="bg-white/40 backdrop-blur-md p-10 md:p-12 rounded-[40px] flex items-center gap-10 border border-[#2d3a2d]/5 group shadow-xl">
               <div className="w-16 h-16 bg-gray-100 group-hover:bg-gray-200 transition-colors text-[#2d3a2d] flex items-center justify-center rounded-[20px] shrink-0">
                 <Users size={36} />
               </div>
@@ -60,7 +60,7 @@ const Impact: React.FC = () => {
                 <p className="font-mono text-base text-[#2d3a2d]/50 uppercase tracking-widest font-bold">Active artisan partnerships</p>
               </div>
             </div>
-            <div className="bg-[#556b2f] text-white p-10 md:p-12 rounded-[40px] flex items-center gap-10 group shadow-xl">
+            <div className="bg-[#556b2f]/90 backdrop-blur-md text-white p-10 md:p-12 rounded-[40px] flex items-center gap-10 group shadow-xl">
               <div className="w-16 h-16 bg-white/10 group-hover:bg-white/20 transition-colors flex items-center justify-center rounded-[20px] shrink-0">
                 <Zap size={36} />
               </div>

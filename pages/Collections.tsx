@@ -16,7 +16,7 @@ const Collections: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[#f2efe8] pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
+        <div className="min-h-screen bg-transparent pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <ScrollReveal direction="up">
@@ -44,7 +44,7 @@ const Collections: React.FC = () => {
                         >
                             <Link
                                 to={`/category/${category.id}`}
-                                className="group block bg-white rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                className="group block bg-[#f2efe8]/40 backdrop-blur-md rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-white/20"
                             >
                                 {/* Image */}
                                 <div className="aspect-[4/3] overflow-hidden relative">
@@ -94,7 +94,7 @@ const Collections: React.FC = () => {
 
                 {/* Bottom CTA */}
                 <ScrollReveal direction="up" delay={0.4}>
-                    <div className="bg-[#2d3a2d] text-white p-12 md:p-16 rounded-[50px] text-center">
+                    <div className="bg-[#2d3a2d]/90 backdrop-blur-md text-white p-12 md:p-16 rounded-[50px] text-center shadow-2xl relative overflow-hidden">
                         <h3 className="text-2xl md:text-3xl font-serif font-bold uppercase tracking-tighter mb-4">
                             Not sure which to choose?
                         </h3>

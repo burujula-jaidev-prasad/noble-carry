@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* THE LIFESPAN BAR SECTION */}
-      <section className="py-32 px-6 bg-white/80 backdrop-blur-sm overflow-hidden">
+      <section className="py-32 px-6 bg-transparent overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <header className="text-center mb-16">
             <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-4">
@@ -152,7 +152,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ECO-HERO CHALLENGE SECTION */}
-      <section className="py-24 bg-[#2d3a2d] text-[#f2efe8] overflow-hidden relative">
+      <section className="py-24 bg-[#2d3a2d]/90 backdrop-blur-md text-[#f2efe8] overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#3d4d21]/20 -skew-x-12 translate-x-1/2" />
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* THE PROBLEM - Dark, Heavy Section */}
-      <section className="py-40 px-6 bg-gradient-to-b from-[#1a1a1a] to-[#2d3a2d] text-white overflow-hidden relative">
+      <section className="py-40 px-6 bg-gradient-to-b from-[#1a1a1a]/95 to-[#2d3a2d]/95 backdrop-blur-md text-white overflow-hidden relative">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
         </div>
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* WAX CANVAS EDUCATION - Craft Section */}
-      <section className="py-32 px-6 bg-[#f4f1ea]/70 backdrop-blur-sm overflow-hidden">
+      <section className="py-32 px-6 bg-transparent overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <ScrollReveal direction="left">
@@ -334,7 +334,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* ENHANCED IMPACT DASHBOARD */}
-      <section className="py-32 px-6 bg-white overflow-hidden">
+      <section className="py-32 px-6 bg-transparent overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <ScrollReveal direction="up">
             <header className="text-center mb-20">
@@ -406,7 +406,7 @@ const Home: React.FC = () => {
           </div>
 
           <ScrollReveal direction="up" delay={1}>
-            <div className="mt-16 p-10 bg-[#f4f1ea] rounded-3xl text-center">
+            <div className="mt-16 p-10 bg-[#f4f1ea]/40 backdrop-blur-sm rounded-3xl text-center border border-white/20">
               <p className="font-mono text-sm text-[#2d3a2d]/60 uppercase tracking-widest leading-relaxed">
                 "We track every gram of waste reclaimed and every hour of artisan labor supported. <br className="hidden md:block" />
                 Radical honesty is our only metric."
@@ -423,7 +423,7 @@ const Home: React.FC = () => {
       <TransparencySection />
 
       {/* FINAL CTA */}
-      <section className="py-32 bg-white text-center">
+      <section className="py-32 bg-transparent text-center">
         <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-10">
           Choose Your Carry
         </h2>
