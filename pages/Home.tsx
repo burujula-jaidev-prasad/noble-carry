@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
 
   return (
-    <main className="relative bg-[#f2efe8] animate-in fade-in duration-1000">
+    <main className="relative bg-transparent animate-in fade-in duration-1000">
       {/* HERO SECTION */}
       <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-20">
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

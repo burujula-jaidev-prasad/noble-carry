@@ -165,6 +165,12 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
   );
 };
 
+const BotWrapper: React.FC<{ isCartOpen: boolean }> = ({ isCartOpen }) => {
+  const location = useLocation();
+  const isCheckout = location.pathname === '/checkout';
+  return <EmilyChatBot hidden={isCartOpen || isCheckout} />;
+};
+
 const App: React.FC = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -202,8 +208,8 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <BackgroundAnimations />
-      <EmilyChatBot />
-      <div className="min-h-screen bg-[#f2efe8] relative">
+      <BotWrapper isCartOpen={isCartOpen} />
+      <div className="min-h-screen bg-transparent relative">
         <Header cartCount={cartCount} onCartOpen={() => setIsCartOpen(true)} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -22,10 +22,10 @@ const StoryPortfolio: React.FC<StoryPortfolioProps> = ({ category = 'ALL' }) => 
     };
 
     return (
-        <section className="py-32 bg-white px-6">
+        <section className="py-32 bg-transparent px-6">
             <div className="max-w-7xl mx-auto">
                 <header className="text-center mb-20">
-                    <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-6">
+                    <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-4">
                         The Portfolio
                     </h2>
                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#2d3a2d] uppercase leading-none tracking-tighter heading-academic mb-6">
@@ -43,7 +43,7 @@ const StoryPortfolio: React.FC<StoryPortfolioProps> = ({ category = 'ALL' }) => 
                             className="story-node group relative"
                             onClick={() => handleNodeClick(product.id)}
                         >
-                            <div className="relative aspect-[3/4] bg-[#e5e1d8] overflow-hidden rounded-3xl shadow-lg transition-all duration-500 group-hover:shadow-2xl cursor-pointer">
+                            <div className="relative aspect-[3/4] bg-[#e5e1d8]/40 backdrop-blur-sm overflow-hidden rounded-3xl shadow-lg transition-all duration-500 group-hover:shadow-2xl cursor-pointer border border-white/20">
                                 <img
                                     src={product.image}
                                     alt={product.name}

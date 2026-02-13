@@ -13,7 +13,11 @@ type Message = {
     options?: string[];
 };
 
-const EmilyChatBot: React.FC = () => {
+interface EmilyChatBotProps {
+    hidden?: boolean;
+}
+
+const EmilyChatBot: React.FC<EmilyChatBotProps> = ({ hidden = false }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [userName, setUserName] = useState<string | null>(null);
     const [messages, setMessages] = useState<Message[]>([]);
@@ -246,42 +250,48 @@ const EmilyChatBot: React.FC = () => {
         return <p className="whitespace-pre-line leading-relaxed">{msg.text}</p>;
     };
 
+    if (hidden) return null;
+
     return (
         <div className="fixed bottom-6 right-6 z-[200]">
             {/* Chat Toggle Button */}
-            {!isOpen && (
-                <motion.button
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    onClick={() => setIsOpen(true)}
-                    className="w-24 h-24 bg-[#2d3a2d] text-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group"
-                >
-                    <div className="absolute inset-0 bg-[#556b2f] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                    <img
-                        src="/noble-carry/emily-profile.png"
-                        alt="Chat with Emily"
-                        className="w-full h-full object-cover relative z-10 p-0"
-                    />
-                    {messages.length === 0 && (
-                        <motion.div
-                            animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
-                            transition={{ repeat: Infinity, duration: 2 }}
-                            className="absolute inset-0 border-2 border-[#556b2f] rounded-full"
+            <AnimatePresence>
+                {!isOpen && (
+                    <motion.button
+                        initial={{ scale: 0, opacity: 0, rotate: -45 }}
+                        animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                        exit={{ scale: 0, opacity: 0, rotate: 45 }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={() => setIsOpen(true)}
+                        className="w-24 h-24 bg-[#2d3a2d] text-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl relative overflow-hidden group"
+                    >
+                        <div className="absolute inset-0 bg-[#556b2f] translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                        <img
+                            src="/noble-carry/emily-profile.png"
+                            alt="Chat with Emily"
+                            className="w-full h-full object-cover relative z-10 p-0"
                         />
-                    )}
-                </motion.button>
-            )}
+                        {messages.length === 0 && (
+                            <motion.div
+                                animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
+                                transition={{ repeat: Infinity, duration: 2 }}
+                                className="absolute inset-0 border-2 border-[#556b2f] rounded-full"
+                            />
+                        )}
+                    </motion.button>
+                )}
+            </AnimatePresence>
 
             {/* Chat Window */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8, y: 100, originX: 1, originY: 1 }}
+                        initial={{ opacity: 0, scale: 0.8, y: 50, originX: '90%', originY: '90%' }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.8, y: 100 }}
-                        className="w-[380px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-6rem)] bg-[#f2efe8] rounded-[32px] shadow-2xl border border-[#2d3a2d]/10 flex flex-col overflow-hidden"
+                        exit={{ opacity: 0, scale: 0.8, y: 50 }}
+                        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                        className="w-[380px] max-w-[calc(100vw-3rem)] h-[600px] max-h-[calc(100vh-6rem)] bg-[#f2efe8]/95 backdrop-blur-md rounded-[32px] shadow-2xl border border-[#2d3a2d]/10 flex flex-col overflow-hidden"
                     >
                         {/* Header */}
                         <div className="bg-[#2d3a2d] p-6 text-[#f2efe8] flex justify-between items-center">
