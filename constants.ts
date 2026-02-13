@@ -8,7 +8,7 @@ export const PRODUCTS: Product[] = [
     name: 'Daily Handbag',
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
-    price: 7470, // ₹7,470 (was $90)
+    price: 13850, // ₹13,850
     image: '/noble-carry/images/products/hb-daily/main.png',
     gallery: [
       '/noble-carry/images/products/hb-daily/main.png',
@@ -30,7 +30,7 @@ export const PRODUCTS: Product[] = [
     name: 'Office Handbag',
     category: 'HANDBAGS',
     subCategory: 'Corporate / Structured',
-    price: 14940, // ₹14,940 (was $180)
+    price: 15400, // ₹15,400
     image: '/noble-carry/images/products/handbags/office.png',
     gallery: [
       '/noble-carry/images/products/handbags/office.png',
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
     name: 'Minimal Carry Bag',
     category: 'HANDBAGS',
     subCategory: 'Essentials / Night Out',
-    price: 6225, // ₹6,225 (was $75)
+    price: 13200, // ₹13,200
     image: '/noble-carry/images/products/handbags/minimal.png',
     description: 'Less is more. A small, rugged pouch for your phone, keys, and cards. Designed for those who travel light.',
     impact: {
@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
     name: 'Market Tote',
     category: 'HANDBAGS',
     subCategory: 'Shopping / Beach',
-    price: 4500,
+    price: 14500, // ₹14,500
     image: '/noble-carry/images/products/handbags/tote.png',
     description: 'The catch-all carry. Capacious, sturdy, and ready for whatever the day throws in.',
     impact: {
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     name: 'Classic Satchel',
     category: 'HANDBAGS',
     subCategory: 'Vintage / Style',
-    price: 8900,
+    price: 15100, // ₹15,100
     image: '/noble-carry/images/products/handbags/satchel.png',
     description: 'Timeless design meeting modern ethics. A nod to the past with a vision for the future.',
     impact: {
@@ -93,7 +93,7 @@ export const PRODUCTS: Product[] = [
     name: 'Evening Clutch',
     category: 'HANDBAGS',
     subCategory: 'Formal / Event',
-    price: 5500,
+    price: 13600, // ₹13,600
     image: '/noble-carry/images/products/handbags/clutch.jpeg',
     description: 'Elegant, understated, and completely sustainable. Make a statement without saying a word.',
     impact: {
