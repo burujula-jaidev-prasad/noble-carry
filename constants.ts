@@ -5,7 +5,7 @@ export const PRODUCTS: Product[] = [
   // HANDBAGS
   {
     id: 'hb-daily',
-    name: 'Daily Handbag',
+    name: 'Bamboo',
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
     price: 13850, // ₹13,850
@@ -22,7 +22,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'hb-office',
-    name: 'Office Handbag',
+    name: 'Galleria',
     category: 'HANDBAGS',
     subCategory: 'Corporate / Structured',
     price: 15400, // ₹15,400
@@ -71,7 +71,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'hb-satchel',
-    name: 'Classic Satchel',
+    name: 'Kelly',
     category: 'HANDBAGS',
     subCategory: 'Vintage / Style',
     price: 15100, // ₹15,100
