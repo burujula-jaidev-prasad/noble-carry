@@ -9,14 +9,9 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
     price: 13850, // ₹13,850
-    image: '/noble-carry/images/products/hb-daily/main.png',
+    image: '/noble-carry/images/products/handbags/daily_brown.png',
     gallery: [
-      '/noble-carry/images/products/hb-daily/main.png',
-      '/noble-carry/images/products/hb-daily/detail-1.png',
-      '/noble-carry/images/products/hb-daily/detail-2.png',
-      '/noble-carry/images/products/hb-daily/extra.png',
-      '/noble-carry/images/products/hb-daily/extra-2.png',
-      '/noble-carry/images/products/hb-daily/extra-3.png'
+      '/noble-carry/images/products/handbags/daily_brown.png'
     ],
     description: 'Your daily companion. Compact, durable, and designed to replace hundreds of disposable bags. Carry what matters, nothing more.',
     impact: {
