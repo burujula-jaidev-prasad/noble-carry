@@ -131,17 +131,17 @@ const Home: React.FC = () => {
               <p className="text-lg text-[#f2efe8]/70 max-w-md leading-relaxed">
                 Ready to carry your legacy? Join our runner in the mission to build the sustainable future. Collect handbags, dodge waste, and reach 500m to unlock an exclusive reward.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row gap-6 pt-4 items-center sm:items-start">
                 <a
                   href="https://burujula-jaidev-prasad.github.io/Noble-Program/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-10 py-5 bg-[#f2efe8] text-[#2d3a2d] rounded-full font-bold uppercase text-sm tracking-widest hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl inline-flex items-center justify-center gap-3"
+                  className="px-10 py-5 bg-[#f2efe8] text-[#2d3a2d] rounded-full font-bold uppercase text-sm tracking-widest hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl inline-flex items-center justify-center gap-3 w-full sm:w-auto"
                 >
                   Launch Mission <ArrowRight size={18} />
                 </a>
-                <div className="flex flex-col justify-center">
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#f2efe8]/40">Reward at 500m</span>
+                <div className="flex flex-col justify-center sm:text-left text-center">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#f2efe8]/60 mb-1">Reward at 500m</span>
                   <span className="text-sm font-bold text-[#8fbc8f]">15% Discount Coupon</span>
                 </div>
               </div>
@@ -159,9 +159,9 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                   <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#8fbc8f 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
                 </div>
-                <div className="absolute bottom-10 left-10 z-20 text-left">
-                  <div className="text-[10px] font-mono uppercase tracking-[0.4em] mb-2 opacity-60">Quest Objective</div>
-                  <div className="text-xl font-bold uppercase tracking-widest">Build Your Legacy</div>
+                <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-20 text-left pr-6">
+                  <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.4em] mb-1 sm:mb-2 opacity-60">Quest Objective</div>
+                  <div className="text-lg sm:text-xl font-bold uppercase tracking-widest leading-tight">Build Your Legacy</div>
                 </div>
               </div>
               {/* Decorative elements */}
