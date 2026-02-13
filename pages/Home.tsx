@@ -106,14 +106,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* ELEVATE YOUR STYLE POSTER SECTION */}
-      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-[#f2efe8] to-white overflow-hidden">
+      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-transparent to-transparent overflow-hidden">
         <ScrollReveal direction="up">
           <div className="max-w-6xl mx-auto">
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
+              {/* Desktop Poster - Hidden on mobile */}
               <img
-                src="/noble-carry/images/elevate-style-poster.png"
+                src="/noble-carry/images/poster-desktop.png"
                 alt="Elevate Your Style with Noble Carry"
-                className="w-full h-auto object-cover"
+                className="hidden md:block w-full h-auto object-cover"
+              />
+              {/* Mobile Poster - Hidden on desktop */}
+              <img
+                src="/noble-carry/images/poster-mobile.png"
+                alt="Elevate Your Style with Noble Carry"
+                className="block md:hidden w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -121,7 +128,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* THE LIFESPAN BAR SECTION */}
-      <section className="py-32 px-6 bg-white overflow-hidden">
+      <section className="py-32 px-6 bg-white/80 backdrop-blur-sm overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <header className="text-center mb-16">
             <h2 className="text-xs font-mono uppercase tracking-[0.5em] text-[#2d3a2d]/40 mb-4">
@@ -260,7 +267,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* WAX CANVAS EDUCATION - Craft Section */}
-      <section className="py-32 px-6 bg-[#f4f1ea] overflow-hidden">
+      <section className="py-32 px-6 bg-[#f4f1ea]/70 backdrop-blur-sm overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <ScrollReveal direction="left">

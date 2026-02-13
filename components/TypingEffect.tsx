@@ -38,7 +38,9 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
 
         if (isDeleting && currentText === '') {
             setIsDeleting(false);
-            setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+            const nextIndex = (currentPhraseIndex + 1) % phrases.length;
+            setCurrentPhraseIndex(nextIndex);
+            // Small delay before starting next phrase to prevent glitch
             return;
         }
 
