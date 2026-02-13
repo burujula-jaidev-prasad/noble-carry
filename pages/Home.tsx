@@ -108,12 +108,12 @@ const Home: React.FC = () => {
       {/* ELEVATE YOUR STYLE POSTER SECTION */}
       <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-[#f2efe8] to-white overflow-hidden">
         <ScrollReveal direction="up">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="relative rounded-[40px] overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500">
               <img
                 src="/noble-carry/images/elevate-style-poster.png"
                 alt="Elevate Your Style with Noble Carry"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
