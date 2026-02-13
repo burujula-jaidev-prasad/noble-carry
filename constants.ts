@@ -9,9 +9,9 @@ export const PRODUCTS: Product[] = [
     category: 'HANDBAGS',
     subCategory: 'Everyday / Casual',
     price: 13850, // ₹13,850
-    image: '/noble-carry/images/products/handbags/daily_brown.png',
+    image: '/noble-carry/images/products/handbags/daily_final.png',
     gallery: [
-      '/noble-carry/images/products/handbags/daily_brown.png'
+      '/noble-carry/images/products/handbags/daily_final.png'
     ],
     description: 'Your daily companion. Compact, durable, and designed to replace hundreds of disposable bags. Carry what matters, nothing more.',
     impact: {
