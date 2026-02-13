@@ -76,7 +76,7 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-[10px] bg-[#556b2f] text-[#f2efe8] rounded-full font-bold hover:bg-[#3d4d21] transition-all transform hover:scale-105 active:scale-95 text-[10px] leading-none shadow-md whitespace-nowrap"
             >
-              Play & Earn <Gamepad2 size={12} />
+              Play & Earn Coupon <Gamepad2 size={12} />
             </a>
             <a
               href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
@@ -141,7 +141,7 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-2xl font-black uppercase tracking-tighter text-[#2d3a2d]/70 hover:text-[#2d3a2d] transition-colors"
             >
-              Play & Earn Coupoun <Gamepad2 size={24} />
+              Play & Earn Coupon <Gamepad2 size={24} />
             </a>
             <a
               href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
