@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, ArrowRight, Zap, RefreshCw, Users, ShieldCheck, Globe, Instagram, Mail } from 'lucide-react';
+import { ShoppingBag, Menu, X, ArrowRight, Zap, RefreshCw, Users, ShieldCheck, Globe, Instagram, Mail, Gamepad2 } from 'lucide-react';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import ProductDetail from './pages/ProductDetail';
@@ -36,8 +36,8 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
         />
       </Link>
 
-      <div className="flex items-center gap-10">
-        <div className="hidden md:flex gap-10 font-mono text-sm uppercase tracking-widest text-[#2d3a2d]">
+      <div className="flex items-center gap-6 md:gap-8">
+        <div className="hidden md:flex items-center gap-8 font-mono text-sm uppercase tracking-widest text-[#2d3a2d]">
 
           {/* Handbags Dropdown */}
           <div
@@ -67,20 +67,31 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
 
           <Link to="/impact" className="hover:text-[#556b2f] transition-colors">Impact</Link>
           <Link to="/about" className="hover:text-[#556b2f] transition-colors">Story</Link>
-          <a
-            href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2 bg-[#2d3a2d] text-[#f2efe8] rounded-full font-bold hover:bg-[#1a241a] transition-all transform hover:scale-105 active:scale-95 text-xs shadow-md"
-          >
-            Join us <Instagram size={14} />
-          </a>
-          <a
-            href="mailto:bjaidevprasad@gmail.com"
-            className="flex items-center gap-2 px-5 py-2 border-2 border-[#2d3a2d] text-[#2d3a2d] rounded-full font-bold hover:bg-[#2d3a2d] hover:text-[#f2efe8] transition-all transform hover:scale-105 active:scale-95 text-xs shadow-sm"
-          >
-            Mail us <Mail size={14} />
-          </a>
+
+          <div className="flex items-center gap-3 ml-2">
+            <a
+              href="https://burujula-jaidev-prasad.github.io/Noble-Program/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-[10px] bg-[#556b2f] text-[#f2efe8] rounded-full font-bold hover:bg-[#3d4d21] transition-all transform hover:scale-105 active:scale-95 text-[10px] leading-none shadow-md whitespace-nowrap"
+            >
+              Play & Earn <Gamepad2 size={12} />
+            </a>
+            <a
+              href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-[9px] bg-[#2d3a2d] text-[#f2efe8] rounded-full font-bold hover:bg-[#1a241a] transition-all transform hover:scale-105 active:scale-95 text-[10px] leading-none shadow-md whitespace-nowrap"
+            >
+              Join us <Instagram size={12} />
+            </a>
+            <a
+              href="mailto:bjaidevprasad@gmail.com"
+              className="flex items-center gap-2 px-4 py-2 border-2 border-[#2d3a2d] text-[#2d3a2d] rounded-full font-bold hover:bg-[#2d3a2d] hover:text-[#f2efe8] transition-all transform hover:scale-105 active:scale-95 text-[10px] leading-none shadow-sm whitespace-nowrap"
+            >
+              Mail us <Mail size={12} />
+            </a>
+          </div>
         </div>
 
         <button onClick={onCartOpen} className="relative group p-2 text-[#2d3a2d] hover:text-[#556b2f] transition-colors">
@@ -123,6 +134,14 @@ const Header: React.FC<{ cartCount: number; onCartOpen: () => void }> = ({ cartC
             </div>
             <Link to="/impact" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Impact</Link>
             <Link to="/about" className="text-3xl font-black uppercase tracking-tighter hover:text-[#2d3a2d] transition-colors">Story</Link>
+            <a
+              href="https://burujula-jaidev-prasad.github.io/Noble-Program/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-2xl font-black uppercase tracking-tighter text-[#2d3a2d]/70 hover:text-[#2d3a2d] transition-colors"
+            >
+              Play & Earn <Gamepad2 size={24} />
+            </a>
             <a
               href="https://www.instagram.com/noblecarry1995?igsh=MWZmZzVyZW9ndnZ6cQ%3D%3D&utm_source=qr"
               target="_blank"

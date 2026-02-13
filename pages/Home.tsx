@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { ArrowRight, Shield, Droplet, Leaf, Users, Recycle, Zap } from 'lucide-react';
+import { ArrowRight, Shield, Droplet, Leaf, Users, Recycle, Zap, Instagram, Mail, Gamepad2 } from 'lucide-react';
 import StoryPortfolio from '../components/StoryPortfolio';
 import TransparencySection from '../components/TransparencySection';
 import LifespanBar from '../components/LifespanBar';
@@ -113,6 +113,62 @@ const Home: React.FC = () => {
             showComparison={true}
             size="lg"
           />
+        </div>
+      </section>
+
+      {/* ECO-HERO CHALLENGE SECTION */}
+      <section className="py-24 bg-[#2d3a2d] text-[#f2efe8] overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#3d4d21]/20 -skew-x-12 translate-x-1/2" />
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 border border-[#f2efe8]/20 rounded-full text-[10px] font-mono uppercase tracking-[0.3em]">
+                <Gamepad2 size={14} className="text-[#8fbc8f]" /> Interactive Experience
+              </div>
+              <h2 className="text-4xl md:text-6xl font-serif font-bold leading-tight uppercase tracking-tighter">
+                The <br /> <span className="text-[#8fbc8f]">Eco-Hero</span> <br /> Challenge
+              </h2>
+              <p className="text-lg text-[#f2efe8]/70 max-w-md leading-relaxed">
+                Ready to carry your legacy? Join our runner in the mission to build the sustainable future. Collect handbags, dodge waste, and reach 500m to unlock an exclusive reward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                <a
+                  href="https://burujula-jaidev-prasad.github.io/Noble-Program/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-10 py-5 bg-[#f2efe8] text-[#2d3a2d] rounded-full font-bold uppercase text-sm tracking-widest hover:bg-white transition-all transform hover:scale-105 active:scale-95 shadow-xl inline-flex items-center justify-center gap-3"
+                >
+                  Launch Mission <ArrowRight size={18} />
+                </a>
+                <div className="flex flex-col justify-center">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#f2efe8]/40">Reward at 500m</span>
+                  <span className="text-sm font-bold text-[#8fbc8f]">15% Discount Coupon</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative group cursor-pointer" onClick={() => window.open('https://burujula-jaidev-prasad.github.io/Noble-Program/', '_blank')}>
+              <div className="aspect-[16/10] bg-[#3d4d21] rounded-[32px] overflow-hidden shadow-2xl relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#2d3a2d] to-transparent opacity-60 z-10" />
+                <div className="absolute inset-0 flex items-center justify-center z-20 group-hover:scale-110 transition-transform duration-700">
+                  <div className="w-20 h-20 bg-[#f2efe8] rounded-full flex items-center justify-center shadow-2xl">
+                    <Gamepad2 size={32} className="text-[#2d3a2d] ml-1" />
+                  </div>
+                </div>
+                {/* Fallback pattern for visual interest */}
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                  <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#8fbc8f 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+                </div>
+                <div className="absolute bottom-10 left-10 z-20 text-left">
+                  <div className="text-[10px] font-mono uppercase tracking-[0.4em] mb-2 opacity-60">Quest Objective</div>
+                  <div className="text-xl font-bold uppercase tracking-widest">Build Your Legacy</div>
+                </div>
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -right-6 w-24 h-24 border border-[#8fbc8f]/20 rounded-full animate-pulse" />
+              <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#8fbc8f]/10 blur-3xl rounded-full" />
+            </div>
+          </div>
         </div>
       </section>
 
