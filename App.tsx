@@ -12,6 +12,7 @@ import Cart from './components/Cart';
 import BackgroundAnimations from './components/BackgroundAnimations';
 import ScrollToTop from './components/ScrollToTop';
 import Collections from './pages/Collections';
+import EmilyChatBot from './components/ChatBot';
 import { PRODUCTS } from './constants';
 import { CartItem, Product } from './types';
 
@@ -201,6 +202,7 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <BackgroundAnimations />
+      <EmilyChatBot />
       <div className="min-h-screen bg-[#f2efe8] relative">
         <Header cartCount={cartCount} onCartOpen={() => setIsCartOpen(true)} />
         <Routes>
